@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+          background-color: #dfe3ee;
+          text-align: center;
+        }
+        div {
+          background-color: #f7f7f7;
+          margin-top: 150px;
+          margin-left: 150px;
+          margin-right: 150px;
+          margin-bottom: 150px;
+          padding: 150px;
+          border: 1px solid black;
+        
+        }
+        
+        h2 {
+          color: rgb(110, 0, 110);
+        }
+
+        label{
+          font-size: 30px;
+        }
+
+        .cool-button{
+          background-color: rgb(199, 116, 199); 
+          border: 2px solid black;
+          padding: 10px 22px;
+          color: black;
+          display: inline-block;
+          font-size: 16px;
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 15px;
+          width: 85px;
+          height: 45px;
+        }
+
+        .inp{
+          -webkit-appearance: none;
+          width: 100%;
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          text-align: center;
+          height: 48px;
+          font-size: 50px;
+          font-weight: 500;
+          width: 140px;
+          height: 100px;
+        }
+        </style>
+        <script>
+          function calculaArea() {
+            var r = document.forms["formCirc"]["raio"].value;
+            var area = Math.PI * Math.pow(r,2);
+            document.getElementById("area").innerHTML = area;
+          }
+          
+        </script>
+        </head>
+<body>
+  <div>
+    <h2>Super Calculadora de Área para Circulos</h2>
+
+    <form name="formCirc">
+    <label>Raio: <o/label><br>
+    <input type="number" name="raio" class="inp" required>
+    <br>
+    <br>
+    <input class="cool-button" onclick="calculaArea()" value="Calcular :D">
+    </form>
+    <br><br>
+    <p id="area"></p>
+
+  </div>
+</body>
+</html>
